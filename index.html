@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>フィンテック×ソーシャルビジネスの最前線を学ぶ。| コングラント × Social Act Career 特別企画</title>
+<meta name="description" content="CEOと学ぶ、社会課題解決とビジネスを両立する仕事のリアル＆ワークショップ。コングラント × Social Act Career 学生向け特別企画。2026年9月8日(火)13:30-17:00開催。">
+<style>
+  :root {
+    --green: #7db928;
+    --green-dark: #5c8f12;
+    --green-deep: #33531a;
+    --yellow: #ffd800;
+    --ink: #1a1a1a;
+    --gray: #666;
+    --bg-soft: #f6faee;
+    --green-soft: #eef6dc;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", "Noto Sans JP", sans-serif;
+    color: var(--ink);
+    line-height: 1.8;
+    background: #fff;
+  }
+  img { max-width: 100%; }
+  .container { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+  .t-hl {
+    background: linear-gradient(transparent 60%, var(--yellow) 60%);
+    font-weight: 800;
+    padding: 0 2px;
+  }
+
+  /* ===== Header ===== */
+  .site-header {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(255,255,255,.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid #eee;
+  }
+  .site-header .container {
+    display: flex; align-items: center; justify-content: space-between;
+    height: 60px;
+  }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; }
+  .badge-student {
+    background: var(--green); color: #fff;
+    border-radius: 999px; padding: 2px 12px;
+    font-size: 12px; font-weight: 700; white-space: nowrap;
+  }
+  .header-cta {
+    background: var(--yellow); color: var(--ink); text-decoration: none;
+    padding: 8px 20px; border-radius: 999px;
+    font-size: 13px; font-weight: 800;
+    white-space: nowrap; flex-shrink: 0;
+    transition: opacity .2s;
+  }
+  .header-cta:hover { opacity: .8; }
+
+  /* ===== Hero ===== */
+  .hero {
+    background:
+      radial-gradient(circle at 88% 8%, rgba(125,185,40,.16) 0%, transparent 42%),
+      linear-gradient(160deg, #fff 55%, var(--green-soft) 100%);
+    padding: 72px 0 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::after {
+    content: "";
+    position: absolute; right: -120px; top: -120px;
+    width: 380px; height: 380px; border-radius: 50%;
+    background: var(--green-soft);
+    z-index: 0;
+  }
+  .hero .container { position: relative; z-index: 1; }
+  .hero-date {
+    display: inline-flex; align-items: center; gap: 12px;
+    color: var(--green-dark); font-weight: 700; font-size: 15px;
+    margin-bottom: 20px;
+  }
+  .hero-date .day { font-size: 26px; letter-spacing: .02em; }
+  .hero-kicker {
+    display: inline-block;
+    background: var(--green-deep); color: #fff;
+    font-size: clamp(13px, 1.9vw, 16px); font-weight: 800;
+    border-radius: 10px;
+    padding: 8px 18px;
+    margin-bottom: 18px;
+    line-height: 1.6;
+  }
+  .hero-kicker .y { color: var(--yellow); }
+  .hero h1 {
+    font-size: clamp(26px, 4.6vw, 48px);
+    font-weight: 900; line-height: 1.5;
+    margin-bottom: 20px;
+    color: var(--green-deep);
+  }
+  .hero h1 .marker {
+    background: linear-gradient(transparent 55%, var(--yellow) 55%);
+    padding: 0 4px;
+  }
+  .hero-sub {
+    font-size: clamp(15px, 2.2vw, 20px);
+    color: var(--green-dark); font-weight: 700;
+    margin-bottom: 20px;
+  }
+  .hero-lead {
+    font-size: 14.5px; color: #333;
+    border-left: 3px solid var(--green);
+    padding-left: 14px;
+    margin-bottom: 36px;
+    max-width: 660px;
+  }
+  .hero-lead b { color: var(--green-dark); }
+  .hero-meta {
+    display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 40px;
+  }
+  .meta-chip {
+    background: #fff; border: 1.5px solid var(--green);
+    color: var(--green-dark); font-weight: 700; font-size: 13px;
+    border-radius: 999px; padding: 6px 18px;
+  }
+  .cta-btn {
+    display: inline-block;
+    background: var(--yellow); color: var(--ink); text-decoration: none;
+    font-size: 18px; font-weight: 900;
+    padding: 18px 56px; border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(125,185,40,.35);
+    transition: transform .15s, box-shadow .15s, opacity .2s;
+  }
+  .cta-btn:hover {
+    opacity: .9;
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(125,185,40,.4);
+  }
+  .cta-note { font-size: 12px; color: var(--gray); margin-top: 12px; }
+
+  /* ===== Section base ===== */
+  section { padding: 80px 0; }
+  .section-label {
+    color: var(--green-dark); font-weight: 800; font-size: 13px;
+    letter-spacing: .18em; text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .section-title {
+    font-size: clamp(22px, 3.6vw, 32px);
+    font-weight: 900; margin-bottom: 40px; line-height: 1.5;
+    color: var(--green-deep);
+  }
+
+  /* ===== Program (Why) ===== */
+  .why .container { max-width: 800px; }
+  .why-prose p { margin-bottom: 22px; font-size: 15.5px; }
+  .why-voices {
+    background: var(--bg-soft);
+    border-radius: 14px;
+    padding: 22px 26px;
+    margin-bottom: 22px;
+  }
+  .why-voices p {
+    margin-bottom: 8px;
+    color: #444; font-weight: 600; font-size: 15px;
+  }
+  .why-voices p:last-child { margin-bottom: 0; }
+  .why-prose .em-green { color: var(--green-dark); font-weight: 800; }
+  .why-close { font-weight: 700; }
+
+  /* ===== About Congrant ===== */
+  .strengths { background: var(--bg-soft); }
+  .strength-list { display: grid; gap: 20px; }
+  .strength-card {
+    background: #fff; border-radius: 16px;
+    padding: 30px 32px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+  .strength-num {
+    font-size: 40px; font-weight: 900;
+    color: var(--green);
+    line-height: 1.1;
+    font-family: Georgia, "Times New Roman", serif;
+    letter-spacing: .02em;
+  }
+  .strength-num small {
+    display: block;
+    font-family: inherit;
+    font-size: 10px; font-weight: 700;
+    color: var(--gray); letter-spacing: .18em;
+  }
+  .strength-body h3 { font-size: 18px; font-weight: 800; margin-bottom: 10px; line-height: 1.5; color: var(--green-deep); }
+  .strength-body p { font-size: 14.5px; color: #333; }
+  .company-table-wrap {
+    margin-top: 28px;
+    background: #fff;
+    border-radius: 16px;
+    padding: 26px 30px;
+    box-shadow: 0 2px 12px rgba(0,0,0,.05);
+  }
+  .company-table-wrap h3 {
+    color: var(--green-dark); font-size: 15.5px; font-weight: 800;
+    margin-bottom: 14px;
+  }
+  .company-table { width: 100%; border-collapse: collapse; }
+  .company-table th, .company-table td {
+    text-align: left; padding: 12px 10px;
+    border-bottom: 1px solid #eef2e4;
+    font-size: 14px; vertical-align: top;
+  }
+  .company-table th {
+    width: 120px; color: var(--green-dark); font-weight: 800;
+    white-space: nowrap;
+  }
+
+  /* ===== Speaker ===== */
+  .speaker-card {
+    background: #fff;
+    border: 1px solid #e6efd8;
+    border-radius: 18px;
+    padding: 34px 36px;
+    box-shadow: 0 3px 16px rgba(0,0,0,.05);
+    max-width: 800px;
+  }
+  .speaker-head {
+    display: flex; align-items: center; gap: 18px;
+    margin-bottom: 16px; flex-wrap: wrap;
+  }
+  .speaker-photo {
+    width: 110px; height: 110px; border-radius: 50%;
+    object-fit: cover; object-position: top center;
+    border: 3px solid var(--green-soft);
+    box-shadow: 0 4px 14px rgba(0,0,0,.12);
+    flex-shrink: 0;
+  }
+  .speaker-role {
+    font-size: 12.5px; font-weight: 700; color: var(--green-dark);
+    letter-spacing: .06em;
+  }
+  .speaker-name { font-size: 22px; font-weight: 900; color: var(--green-deep); line-height: 1.4; }
+  .speaker-card > p { font-size: 14.5px; color: #333; margin-bottom: 14px; }
+  .speaker-card > p:last-of-type { margin-bottom: 0; }
+  .speaker-awards {
+    margin-top: 4px;
+    font-size: 13px; color: var(--gray);
+  }
+  .speaker-note {
+    margin-top: 18px;
+    background: var(--green-soft);
+    border-radius: 12px;
+    padding: 14px 18px;
+    font-size: 13.5px; color: #333;
+  }
+  .speaker-note b { color: var(--green-dark); }
+
+  /* ===== Takeaways ===== */
+  .takeaway-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .takeaway-card {
+    background: #fff;
+    border: 1px solid #e6efd8;
+    border-radius: 16px;
+    padding: 26px 24px;
+    box-shadow: 0 3px 14px rgba(125,185,40,.08);
+  }
+  .takeaway-icon { font-size: 30px; display: block; margin-bottom: 10px; }
+  .takeaway-card h3 { font-size: 16.5px; font-weight: 800; margin-bottom: 8px; line-height: 1.5; color: var(--green-deep); }
+  .takeaway-card p { font-size: 14px; color: #333; }
+
+  /* ===== For You ===== */
+  .foryou { background: var(--bg-soft); }
+  .check-list { list-style: none; display: grid; gap: 14px; }
+  .check-list li {
+    background: #fff; border-radius: 14px;
+    padding: 20px 24px 20px 58px;
+    position: relative;
+    font-weight: 600; font-size: 15.5px;
+    box-shadow: 0 2px 10px rgba(0,0,0,.04);
+  }
+  .check-list li::before {
+    content: "✓";
+    position: absolute; left: 20px; top: 50%;
+    transform: translateY(-50%);
+    width: 26px; height: 26px; border-radius: 50%;
+    background: var(--green); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 900;
+    line-height: 1;
+  }
+  .check-list .em { color: var(--green-dark); font-weight: 800; }
+  .check-list .hl {
+    background: linear-gradient(transparent 60%, var(--yellow) 60%);
+    font-weight: 800;
+  }
+
+  /* ===== Timetable ===== */
+  .timeline { position: relative; max-width: 760px; }
+  .timeline::before {
+    content: "";
+    position: absolute; left: 13px; top: 10px; bottom: 10px;
+    width: 2px; background: #dcecc3;
+  }
+  .tl-item { position: relative; padding-left: 48px; }
+  .tl-item + .tl-item { margin-top: 18px; }
+  .tl-dot {
+    position: absolute; left: 0; top: 2px;
+    width: 28px; height: 28px; border-radius: 50%;
+    background: var(--green); color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 800;
+    box-shadow: 0 0 0 4px #fff;
+  }
+  .tl-item.minor .tl-dot {
+    width: 12px; height: 12px; left: 8px; top: 7px;
+    background: #c3dd97;
+  }
+  .tl-item.minor .tl-label {
+    font-size: 13px; color: var(--gray); font-weight: 600;
+  }
+  .tl-item.minor .tl-label b { color: #9cb377; font-weight: 700; margin-right: 12px; letter-spacing: .02em; }
+  .tl-card {
+    background: #fff; border-radius: 16px;
+    padding: 26px 28px;
+    box-shadow: 0 3px 16px rgba(0,0,0,.06);
+    border: 1px solid #e8f1d8;
+  }
+  .act-head {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 10px;
+    margin-bottom: 12px;
+  }
+  .act-badge {
+    background: var(--green); color: #fff;
+    font-size: 12px; font-weight: 800;
+    border-radius: 999px; padding: 3px 14px;
+    letter-spacing: .06em;
+  }
+  .act-badge.accent { background: var(--green-deep); color: var(--yellow); }
+  .act-name { font-weight: 900; font-size: 17px; color: var(--green-dark); }
+  .act-time { font-size: 13px; font-weight: 700; color: var(--gray); margin-left: auto; }
+  .tl-card h3 { font-size: clamp(17px, 2.6vw, 21px); font-weight: 900; line-height: 1.5; margin-bottom: 10px; color: var(--green-deep); }
+  .tl-card > p { font-size: 14.5px; color: #333; }
+  .tl-note { font-size: 12px; color: var(--gray); margin-top: 8px; }
+  .tl-steps { margin-top: 14px; display: grid; gap: 8px; }
+  .tl-step {
+    background: var(--bg-soft);
+    border-radius: 10px;
+    padding: 10px 16px;
+    font-size: 13.5px;
+    display: flex; gap: 10px; align-items: baseline;
+  }
+  .tl-step b { color: var(--green-dark); flex-shrink: 0; }
+
+  /* ===== Outline ===== */
+  .outline { background: var(--bg-soft); }
+  .outline-table { width: 100%; border-collapse: collapse; }
+  .outline-table th, .outline-table td {
+    text-align: left; padding: 18px 12px;
+    border-bottom: 1px solid #e2e9d4;
+    font-size: 15px; vertical-align: top;
+  }
+  .outline-table th {
+    width: 140px; color: var(--green-dark); font-weight: 800;
+    white-space: nowrap;
+  }
+  .outline-table a { color: var(--green-dark); font-weight: 700; }
+  .outline-table small { color: var(--gray); font-size: 13px; }
+
+  /* ===== Bottom CTA ===== */
+  .bottom-cta {
+    background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-dark) 100%);
+    color: #fff; text-align: center;
+    padding: 88px 0;
+  }
+  .bottom-cta h2 {
+    font-size: clamp(22px, 3.8vw, 34px);
+    font-weight: 900; line-height: 1.6;
+    margin-bottom: 12px;
+  }
+  .bottom-cta h2 .y { color: var(--yellow); }
+  .bottom-cta p { opacity: .9; margin-bottom: 36px; font-size: 15px; }
+  .cta-btn-white {
+    display: inline-block;
+    background: var(--yellow); color: var(--ink); text-decoration: none;
+    font-size: 18px; font-weight: 900;
+    padding: 18px 56px; border-radius: 999px;
+    box-shadow: 0 8px 24px rgba(0,0,0,.25);
+    transition: transform .15s, opacity .2s;
+  }
+  .cta-btn-white:hover { transform: translateY(-2px); opacity: .92; }
+  .bottom-cta .cta-note { color: rgba(255,255,255,.85); }
+
+  /* ===== Footer ===== */
+  .site-footer {
+    padding: 28px 0; text-align: center;
+    font-size: 12px; color: var(--gray);
+    border-top: 1px solid #eee;
+  }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 720px) {
+    section { padding: 56px 0; }
+    .hero { padding: 48px 0 44px; }
+    .tl-card { padding: 20px; }
+    .act-time { margin-left: 0; width: 100%; }
+    .site-header .container { gap: 10px; }
+    .brand .brand-text { font-size: 11px; line-height: 1.4; }
+    .badge-student { font-size: 11px; padding: 2px 10px; }
+    .hero-date { flex-wrap: wrap; row-gap: 0; }
+    .hero-date .day { font-size: 21px; white-space: nowrap; }
+    .strength-card { grid-template-columns: 1fr; gap: 8px; padding: 24px; }
+    .speaker-card { padding: 24px; }
+    .takeaway-grid { grid-template-columns: 1fr; }
+    .company-table th { width: 90px; }
+    .section-title br { display: none; }
+    .cta-btn, .cta-btn-white { display: block; text-align: center; padding: 16px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- TODO: 申込フォームURLが決まったら、ページ内の href="#entry"(CTA 3箇所)をフォームURLに差し替える -->
+
+<header class="site-header">
+  <div class="container">
+    <div class="brand">
+      <span class="badge-student">学生向け</span>
+      <span class="brand-text">コングラント × Social Act Career│特別企画</span>
+    </div>
+    <a href="#entry" class="header-cta">参加申込</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-date">
+      <span class="day">2026.9.8 (火)</span>
+      <span>13:30 – 17:00</span>
+    </div>
+    <p class="hero-kicker"><span class="y">CEOと学ぶ、</span>社会課題解決とビジネスを両立する仕事のリアル＆ワークショップ!</p>
+    <h1>
+      <span class="marker">フィンテック × ソーシャルビジネス</span>の<br>
+      最前線を学ぶ。
+    </h1>
+    <p class="hero-sub">― 社会性も、経済性も。どちらも諦めないキャリアへ。―</p>
+    <p class="hero-lead">"社会を変える人"を、支える仕組みをつくる。<br>NPOが挑む社会課題の現場で、その活動を「届ける」「広げる」仕組みとは?<br><b>資金調達 × PR の両輪</b>で支えるコングラントの社長が登壇する、超実践型ワークショップです。</p>
+    <div class="hero-meta">
+      <span class="meta-chip">大学生対象</span>
+      <span class="meta-chip">参加無料</span>
+      <span class="meta-chip">定員15名・先着</span>
+      <span class="meta-chip">選考なし</span>
+      <span class="meta-chip">私服OK・手ぶらOK</span>
+    </div>
+    <a href="#entry" class="cta-btn">参加を申し込む</a>
+    <p class="cta-note">※ 定員に達し次第、受付を終了します</p>
+  </div>
+</section>
+
+<section class="why">
+  <div class="container">
+    <p class="section-label">Program</p>
+    <h2 class="section-title">🌎🤝 NPOをサポートする、<br>ビジネスモデルとは? 📈</h2>
+    <div class="why-prose">
+      <p>本プログラムでは、社会課題解決の最前線で活躍するNPO・ソーシャルセクターを<span class="em-green">ITの力で支えるコングラントのCEO</span>が、コングラントの社会課題解決とビジネスを直接語ります。</p>
+      <div class="why-voices">
+        <p>「本当に社会貢献とビジネスは両立できるの?」</p>
+        <p>「日本のNPOや寄付って、実際どうなの?」</p>
+        <p>「どのように社会の役に立てるの?」</p>
+      </div>
+      <p>――そんな疑問に、<span class="t-hl">具体的な事例を交えながら</span>お答えします。</p>
+      <p>講演後は、<b>クラウドファンディングのタイトル・キャッチコピーを考えるワークショップ</b>を実施。参加者同士でアイデアを出し合い、一番共感できるコピーを選び出すことで、<span class="em-green">人の心を動かすPR・広報スキル</span>のヒントを掴んでいただきます。</p>
+      <p class="why-close">ソーシャルビジネスのリアルな仕組みと広報戦略を実践を通して学び、社会性 × ビジネススキルを、いま自分のキャリアに取り入れるチャンス。コングラントの仕事の一部を体験しながら、将来のキャリアについて一緒に考えてみませんか?</p>
+    </div>
+  </div>
+</section>
+
+<section class="strengths">
+  <div class="container">
+    <p class="section-label">About Congrant</p>
+    <h2 class="section-title">コングラントってどんな会社?</h2>
+    <div class="strength-list">
+      <div class="strength-card">
+        <div class="strength-num"><small>POINT</small>01</div>
+        <div class="strength-body">
+          <h3>3,000団体以上・累計寄付120億円超を支える「寄付DX」</h3>
+          <p>NPO・ソーシャルセクター向けに、寄付募集・決済・支援者管理(CRM)をワンストップで提供するデジタル・ファンドレイジングシステム「コングラント」を展開。認定NPOや公益法人を含む3,000団体以上が利用し、累計寄付取扱額は120億円を超えます。まさに"社会を変える人を支えるインフラ"です。</p>
+        </div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num"><small>POINT</small>02</div>
+        <div class="strength-body">
+          <h3>資金調達 × PR の「両輪」で団体を支える</h3>
+          <p>お金を集める仕組み(決済・クラウドファンディング)だけでなく、活動を「届ける」「広げる」ための情報発信・PRの支援まで。団体の想いが支援者に届くまでの全体を設計するのがコングラントの仕事です。今回のワークショップでは、その一部を実際に体験できます。</p>
+        </div>
+      </div>
+      <div class="strength-card">
+        <div class="strength-num"><small>POINT</small>03</div>
+        <div class="strength-body">
+          <h3>「あらゆる困難に寄付が届く世界」というビジョン</h3>
+          <p>「日本に寄付文化がないのではなく、寄付の仕組み(システム)が足りていない」――その課題認識から、NPOの業務改善と寄付者体験の向上を通じて寄付のエコシステム全体の変革に挑んでいます。2025年には寄付者向けアプリ「GOJO」もリリースし、事業の伸びがそのまま社会へのインパクトになる構造をつくっています。</p>
+        </div>
+      </div>
+    </div>
+    <div class="company-table-wrap">
+      <h3>会社概要</h3>
+      <table class="company-table">
+        <tr><th>社名</th><td>コングラント株式会社</td></tr>
+        <tr><th>設立</th><td>2020年5月(リタワークス株式会社のNPO事業をスピンオフして設立)</td></tr>
+        <tr><th>本社</th><td>大阪府大阪市</td></tr>
+        <tr><th>事業内容</th><td>寄付募集・決済・支援者管理システム「コングラント」、寄付者向けアプリ「GOJO」などの開発・運営</td></tr>
+        <tr><th>ビジョン</th><td>あらゆる困難に寄付が届く世界の実現</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="speaker">
+  <div class="container">
+    <p class="section-label">Speaker</p>
+    <h2 class="section-title">登壇者</h2>
+    <div class="speaker-card">
+      <div class="speaker-head">
+        <img class="speaker-photo" src="sato.jpg" alt="コングラント株式会社 代表取締役 佐藤正隆氏">
+        <div>
+          <p class="speaker-role">コングラント株式会社 代表取締役</p>
+          <p class="speaker-name">佐藤 正隆 氏</p>
+        </div>
+      </div>
+      <p>1980年生まれ、岡山県出身。2008年、NPO・病院業界を専門とするWeb制作・システム開発会社リタワークス株式会社を大阪で創業。2016年に同社NPO事業部を立ち上げ、2017年、寄付募集・決済・CRMのデジタル・ファンドレイジングシステム「コングラント」をローンチ。2020年5月に事業をスピンオフしてコングラント株式会社を設立し、代表取締役に就任。</p>
+      <p>「あらゆる困難に寄付が届く世界の実現」をビジョンに掲げ、導入3,000団体以上・累計寄付取扱額120億円超のサービスへと成長させる。ソニーやジェネシア・ベンチャーズ、KIBOW社会投資ファンドなどから資金調達を実施。</p>
+      <p class="speaker-awards">東洋経済「すごいベンチャー100」(2024)、Forbes JAPAN「NEXT IMPACT STARTUPS 30」(2025)選出。</p>
+      <div class="speaker-note">
+        <b>社員クロストークも開催!</b>&nbsp;代表の話だけでなく、現場で働く社員の方々のキャリアや日々の仕事のリアルも聞けます。「入社の決め手は?」「実際、大変なことは?」――気になることを何でも聞いてください。
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="takeaways">
+  <div class="container">
+    <p class="section-label">Takeaways</p>
+    <h2 class="section-title">💡 このワークショップで得られること</h2>
+    <div class="takeaway-grid">
+      <div class="takeaway-card">
+        <span class="takeaway-icon">📣</span>
+        <h3>NPOを支えるPR・広報の役割と重要性</h3>
+        <p>活動を「届ける」「広げる」仕組みの裏側を、最前線の実例から学べます。</p>
+      </div>
+      <div class="takeaway-card">
+        <span class="takeaway-icon">🛠</span>
+        <h3>実際のNPO事例をもとにした施策設計の方法</h3>
+        <p>クラウドファンディングのコピーづくりを通して、人の心を動かす施策の考え方を体験します。</p>
+      </div>
+      <div class="takeaway-card">
+        <span class="takeaway-icon">🔥</span>
+        <h3>社長から直接フィードバックを受けられるチャンス!</h3>
+        <p>あなたのアイデアに、事業をつくってきた経営者から本気のコメントが返ってきます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="foryou">
+  <div class="container">
+    <p class="section-label">For You</p>
+    <h2 class="section-title">こんな人に、来てほしい。</h2>
+    <ul class="check-list">
+      <li><span class="em">NPOやソーシャルビジネス</span>に興味がある人</li>
+      <li><span class="hl">ビジネススキルで社会貢献したい</span>人</li>
+      <li>PR・広報スキルを<span class="em">実践で学びたい</span>人</li>
+      <li>社長から<span class="em">経営のリアルな話</span>を直接聞きたい人</li>
+      <li><span class="hl">ワクワクするような仕事</span>を探している人</li>
+    </ul>
+  </div>
+</section>
+
+<section class="timetable-sec">
+  <div class="container">
+    <p class="section-label">Timetable</p>
+    <h2 class="section-title">当日は、こんな流れ。</h2>
+    <div class="timeline">
+      <div class="tl-item">
+        <span class="tl-dot">1</span>
+        <div class="tl-card">
+          <div class="act-head">
+            <span class="act-badge">オープニング</span>
+            <span class="act-name">学生自己紹介</span>
+            <span class="act-time">20分</span>
+          </div>
+          <p>まずは参加者同士で自己紹介。少人数開催なので、同じ関心を持つ仲間の顔が見える距離感でスタートします。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot">2</span>
+        <div class="tl-card">
+          <div class="act-head">
+            <span class="act-badge">第1部</span>
+            <span class="act-name">代表・佐藤氏による事業紹介</span>
+            <span class="act-time">40分</span>
+          </div>
+          <h3>社会課題解決とビジネスの両立を、CEOの言葉で。</h3>
+          <p>「本当に社会貢献とビジネスは両立できるの?」「日本のNPOや寄付って、実際どうなの?」――そんな疑問に、寄付DXの最前線から具体的な事例を交えてお答えします。</p>
+        </div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot">3</span>
+        <div class="tl-card">
+          <div class="act-head">
+            <span class="act-badge">Q&amp;A</span>
+            <span class="act-name">質疑応答</span>
+            <span class="act-time">20分</span>
+          </div>
+          <p>事業のこと、キャリアのこと、経営のこと。気になることを代表に直接ぶつけられる時間です。</p>
+        </div>
+      </div>
+      <div class="tl-item minor">
+        <span class="tl-dot"></span>
+        <p class="tl-label"><b>休憩</b>5分</p>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot">4</span>
+        <div class="tl-card">
+          <div class="act-head">
+            <span class="act-badge accent">第2部</span>
+            <span class="act-name">ワークショップ</span>
+            <span class="act-time">90分</span>
+          </div>
+          <h3>クラウドファンディングの「タイトル・キャッチコピー」をつくる。</h3>
+          <p>コングラントの仕事の一部を体験する超実践型ワークショップ。人の心を動かすコピーとは何かを、手を動かしながら掴みます。</p>
+          <div class="tl-steps">
+            <div class="tl-step"><b>STEP 1</b><span>実際のNPO事例をもとに、クラウドファンディングのタイトル・キャッチコピーをチームで考える</span></div>
+            <div class="tl-step"><b>STEP 2</b><span>参加者同士でアイデアを出し合い、一番共感できるコピーを選び出す</span></div>
+            <div class="tl-step"><b>STEP 3</b><span>社長から直接フィードバック。プロの視点で「届くコピー」との差を知る</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="tl-item">
+        <span class="tl-dot">5</span>
+        <div class="tl-card">
+          <div class="act-head">
+            <span class="act-badge">第3部</span>
+            <span class="act-name">社員クロストーク</span>
+            <span class="act-time">30分</span>
+          </div>
+          <h3>現場で働く社員の、本音のキャリアトーク。</h3>
+          <p>なぜこの会社を選んだのか、どんな瞬間にやりがいを感じるのか。現場社員のリアルな声から、「ソーシャル×ビジネスで働く」ことの具体像を持ち帰ってください。</p>
+        </div>
+      </div>
+      <div class="tl-item minor">
+        <span class="tl-dot"></span>
+        <p class="tl-label"><b>クロージング</b>アンケート・写真撮影(15分)</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="outline">
+  <div class="container">
+    <p class="section-label">Outline</p>
+    <h2 class="section-title">開催概要</h2>
+    <table class="outline-table">
+      <tr><th>イベント名</th><td>フィンテック×ソーシャルビジネスの最前線を学ぶ。<br>〜社会性も、経済性も。どちらも諦めないキャリアへ。〜</td></tr>
+      <tr><th>主催</th><td>コングラント株式会社 × Social Act Career</td></tr>
+      <tr><th>日時</th><td>2026年9月8日(火)13:30 – 17:00</td></tr>
+      <tr><th>対象</th><td>大学生(学年不問)</td></tr>
+      <tr><th>定員</th><td>15名(先着順)</td></tr>
+      <tr><th>会場</th><td>調整中<br><small>※確定次第このページでご案内します。詳細はお申込者にご連絡いたします。</small></td></tr>
+      <tr><th>参加費</th><td>無料</td></tr>
+      <tr><th>服装・持ち物</th><td>服装自由(私服OK)・手ぶらOK</td></tr>
+      <tr><th>備考</th><td>選考とは一切関係ありません。<br>授業やゼミと重なる場合は、遅刻・途中参加もご相談ください。</td></tr>
+    </table>
+  </div>
+</section>
+
+<section class="bottom-cta" id="entry">
+  <div class="container">
+    <h2>社会性 × ビジネススキルを、<br>いま自分の<span class="y">キャリアに取り入れる</span>チャンス。</h2>
+    <p>NPOやソーシャルビジネスに興味がある方、ビジネススキルで社会貢献したい方、<br>そして、ワクワクするような仕事を探している方のご参加をお待ちしています。</p>
+    <a href="#entry" class="cta-btn-white">参加を申し込む</a>
+    <p class="cta-note">※ 申込フォームは近日公開/定員に達し次第、受付を終了します</p>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    コングラント株式会社 × Social Act Career│学生向け特別企画
+  </div>
+</footer>
+
+</body>
+</html>
