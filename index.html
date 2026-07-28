@@ -31,6 +31,8 @@
     font-weight: 800;
     padding: 0 2px;
   }
+  /* フレーズ単位で折り返すための区切り(文節の途中で改行させない) */
+  .nb { display: inline-block; }
 
   /* ===== Header ===== */
   .site-header {
@@ -148,6 +150,11 @@
     font-size: clamp(22px, 3.6vw, 32px);
     font-weight: 900; margin-bottom: 40px; line-height: 1.5;
     color: var(--green-deep);
+  }
+  /* 見出しの行分割を均等にして、末尾1〜2文字だけの折り返しを防ぐ */
+  .hero h1, .hero-kicker, .hero-sub, .section-title,
+  .strength-body h3, .takeaway-card h3, .tl-card h3, .bottom-cta h2 {
+    text-wrap: balance;
   }
 
   /* ===== Program (Why) ===== */
@@ -415,6 +422,23 @@
     .company-table th { width: 90px; }
     .section-title br { display: none; }
     .cta-btn, .cta-btn-white { display: block; text-align: center; padding: 16px 20px; }
+
+    /* --- 文字配列の調整(スマホ) --- */
+    /* キッカー帯: 1行に収まるサイズに */
+    .hero-kicker { font-size: 12.5px; padding: 7px 12px; border-radius: 8px; }
+    /* メインタイトル: 固定改行を解除して自然に折り返す */
+    .hero h1 { font-size: 22px; line-height: 1.6; }
+    .hero h1 br { display: none; }
+    .hero-sub { font-size: 14.5px; }
+    /* リード文: 固定改行を解除して段落として流す */
+    .hero-lead br { display: none; }
+    .hero-lead { font-size: 14px; }
+    /* 参加者の声: カギカッコをぶら下げて折り返しを揃える */
+    .why-voices { padding: 18px 16px; }
+    .why-voices p { font-size: 14px; text-indent: -0.6em; padding-left: 0.6em; }
+    /* 下部CTA: 固定改行を解除 */
+    .bottom-cta h2 br, .bottom-cta p br { display: none; }
+    .bottom-cta h2 { font-size: 21px; }
   }
 </style>
 </head>
@@ -439,11 +463,8 @@
       <span>13:30 – 17:00</span>
     </div>
     <p class="hero-kicker"><span class="y">フィンテック × ソーシャルビジネス</span>の最前線を学ぶ。</p>
-    <h1>
-      <span class="marker">CEOと学ぶ、</span>社会課題解決とビジネスを<br>
-      両立する仕事のリアル＆ワークショップ!
-    </h1>
-    <p class="hero-sub">― 社会性も、経済性も。どちらも諦めないキャリアへ。―</p>
+    <h1><span class="marker">CEOと学ぶ、</span>社会課題解決とビジネスを<br>両立する仕事のリアル＆ワークショップ!</h1>
+    <p class="hero-sub"><span class="nb">― 社会性も、経済性も。</span><span class="nb">どちらも諦めないキャリアへ。―</span></p>
     <p class="hero-lead">"社会を変える人"を、支える仕組みをつくる。<br>NPOが挑む社会課題の現場で、その活動を支え、広げていく仕組みとは?<br><b>寄付を取り巻く"仕組み"そのもの</b>を変えようとするコングラントの社長が登壇する、超実践型ワークショップです。</p>
     <div class="hero-meta">
       <span class="meta-chip">大学生対象</span>
@@ -483,7 +504,7 @@
       <div class="strength-card">
         <div class="strength-num"><small>POINT</small>01</div>
         <div class="strength-body">
-          <h3>4,000団体以上・累計寄付150億円超を支える「寄付DX」</h3>
+          <h3>4,000団体以上・累計寄付<span class="nb">150億円超</span>を支える<span class="nb">「寄付DX」</span></h3>
           <p>NPO・ソーシャルセクター向けに、寄付募集・決済・支援者管理(CRM)をワンストップで提供するデジタル・ファンドレイジングシステム「コングラント」を展開。認定NPOや公益法人を中心に4,000を超える団体が利用し、累計の寄付流通額は150億円を超えます。まさに"社会を変える人を支えるインフラ"です。</p>
         </div>
       </div>
@@ -497,7 +518,7 @@
       <div class="strength-card">
         <div class="strength-num"><small>POINT</small>03</div>
         <div class="strength-body">
-          <h3>「あらゆる困難に寄付が届く世界」というビジョン</h3>
+          <h3><span class="nb">「あらゆる困難に寄付が届く世界」</span>という<span class="nb">ビジョン</span></h3>
           <p>「日本に寄付文化がないのではなく、寄付の仕組み(システム)が足りていない」――その課題認識から、いまコングラントは"寄付決済の会社"にとどまらず、NPO・企業・行政・寄付者をつなぐ<span class="em-green">「社会課題解決の中間支援組織」</span>を目指しています。スマート寄付アプリ「GOJO」の提供、認定NPOカンファレンス「ignite!」の開催、大学・研究機関との共同研究など、事業の伸びがそのまま社会へのインパクトになる構造をつくっています。</p>
         </div>
       </div>
@@ -528,7 +549,7 @@
         </div>
       </div>
       <p>1980年生まれ、岡山県出身。<br>2008年にWEBサービス・システム開発のリタワークス株式会社を創業。同社NPO事業部の新規事業として寄付決済・寄付DXシステム「コングラント」の提供を開始し、2020年5月にコングラント事業をスピンオフし法人設立、代表取締役に就任。ジェネシア・ベンチャーズ、Sony Innovation Fund、KIBOW社会投資ファンド等からの投資実績。</p>
-      <p class="speaker-awards">日経新聞社 FIN/SUM 2026 ファイナルピッチ進出、日経クロストレンド「未来の市場をつくる100社」、Forbes「NEXT IMPACT STARTUPS 30」「FRONTRUNNER」、週刊東洋経済「すごいベンチャー100」、J-Startup KANSAI、インパクトスタートアップ協会 正会員など</p>
+      <p class="speaker-awards">日経新聞社 FIN/SUM 2026 ファイナルピッチ進出、日経クロストレンド「未来の市場をつくる100社」、Forbes「NEXT IMPACT STARTUPS 30」「FRONTRUNNER」、週刊東洋経済「すごいベンチャー100」、<span class="nb">J-Startup KANSAI</span>、インパクトスタートアップ協会 正会員など</p>
       <div class="speaker-note">
         <b>社員クロストークも開催!</b>&nbsp;代表の話だけでなく、現場で働く社員の方々のキャリアや日々の仕事のリアルも聞けます。「入社の決め手は?」「実際、大変なことは?」――気になることを何でも聞いてください。
       </div>
@@ -539,7 +560,7 @@
 <section class="takeaways">
   <div class="container">
     <p class="section-label">Takeaways</p>
-    <h2 class="section-title">💡 このワークショップで得られること</h2>
+    <h2 class="section-title">💡 <span class="nb">このワークショップで</span><span class="nb">得られること</span></h2>
     <div class="takeaway-grid">
       <div class="takeaway-card">
         <span class="takeaway-icon">📣</span>
@@ -548,12 +569,12 @@
       </div>
       <div class="takeaway-card">
         <span class="takeaway-icon">🛠</span>
-        <h3>実際のNPO事例をもとにした施策設計の方法</h3>
+        <h3><span class="nb">実際のNPO事例をもとにした</span><span class="nb">施策設計の方法</span></h3>
         <p>クラウドファンディングのコピーづくりを通して、人の心を動かす施策の考え方を体験します。</p>
       </div>
       <div class="takeaway-card">
         <span class="takeaway-icon">🔥</span>
-        <h3>社長から直接フィードバックを受けられるチャンス!</h3>
+        <h3>社長から<span class="nb">直接フィードバックを</span><span class="nb">受けられるチャンス!</span></h3>
         <p>あなたのアイデアに、事業をつくってきた経営者から本気のコメントが返ってきます。</p>
       </div>
     </div>
@@ -625,7 +646,7 @@
             <span class="act-name">ワークショップ</span>
             <span class="act-time">90分</span>
           </div>
-          <h3>クラウドファンディングの「タイトル・キャッチコピー」をつくる。</h3>
+          <h3><span class="nb">クラウドファンディングの</span><span class="nb">「タイトル・キャッチコピー」</span>を<span class="nb">つくる。</span></h3>
           <p>コングラントの仕事の一部を体験する超実践型ワークショップ。人の心を動かすコピーとは何かを、手を動かしながら掴みます。</p>
           <div class="tl-steps">
             <div class="tl-step"><b>STEP 1</b><span>実際のNPO事例をもとに、クラウドファンディングのタイトル・キャッチコピーをチームで考える</span></div>
@@ -642,7 +663,7 @@
             <span class="act-name">社員クロストーク</span>
             <span class="act-time">30分</span>
           </div>
-          <h3>現場で働く社員の、本音のキャリアトーク。</h3>
+          <h3><span class="nb">現場で働く社員の、</span><span class="nb">本音のキャリアトーク。</span></h3>
           <p>なぜこの会社を選んだのか、どんな瞬間にやりがいを感じるのか。現場社員のリアルな声から、「ソーシャル×ビジネスで働く」ことの具体像を持ち帰ってください。</p>
         </div>
       </div>
@@ -674,7 +695,7 @@
 
 <section class="bottom-cta" id="entry">
   <div class="container">
-    <h2>社会性 × ビジネススキルを、<br>いま自分の<span class="y">キャリアに取り入れる</span>チャンス。</h2>
+    <h2><span class="nb">社会性 × ビジネススキルを、</span><br><span class="nb">いま自分の</span><span class="y nb">キャリアに取り入れる</span><span class="nb">チャンス。</span></h2>
     <p>NPOやソーシャルビジネスに興味がある方、ビジネススキルで社会貢献したい方、<br>そして、ワクワクするような仕事を探している方のご参加をお待ちしています。</p>
     <a href="#entry" class="cta-btn-white">参加を申し込む</a>
     <p class="cta-note">※ 申込フォームは近日公開/定員に達し次第、受付を終了します</p>
