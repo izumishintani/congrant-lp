@@ -45,10 +45,7 @@
     display: flex; align-items: center; justify-content: space-between;
     height: 60px;
   }
-  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; min-width: 0; }
-  .brand-logos { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-  .brand-logo { height: 40px; width: auto; display: block; }
-  .brand-x { font-weight: 800; color: var(--gray); font-size: 13px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 14px; }
   .badge-student {
     background: var(--green); color: #fff;
     border-radius: 999px; padding: 2px 12px;
@@ -141,20 +138,6 @@
     box-shadow: 0 12px 28px rgba(125,185,40,.4);
   }
   .cta-note { font-size: 12px; color: var(--gray); margin-top: 12px; }
-  .hero-photo { margin: 44px 0 0; }
-  .hero-photo img {
-    width: 100%; height: clamp(220px, 38vw, 420px);
-    object-fit: cover; display: block;
-    border-radius: 20px;
-    box-shadow: 0 10px 30px rgba(51,83,26,.16);
-  }
-  .section-photo { margin: 36px 0 0; }
-  .section-photo img {
-    width: 100%; height: clamp(200px, 32vw, 340px);
-    object-fit: cover; display: block;
-    border-radius: 16px;
-    box-shadow: 0 4px 18px rgba(0,0,0,.08);
-  }
 
   /* ===== Section base ===== */
   section { padding: 80px 0; }
@@ -390,15 +373,6 @@
   }
   .outline-table a { color: var(--green-dark); font-weight: 700; }
   .outline-table small { color: var(--gray); font-size: 13px; }
-  .organizer-logos {
-    display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-    margin-bottom: 10px;
-  }
-  .organizer-logos img {
-    height: 64px; width: auto; display: block;
-    background: #fff; border-radius: 10px; padding: 6px;
-    border: 1px solid #e2e9d4;
-  }
 
   /* ===== Bottom CTA ===== */
   .bottom-cta {
@@ -438,11 +412,7 @@
     .tl-card { padding: 20px; }
     .act-time { margin-left: 0; width: 100%; }
     .site-header .container { gap: 10px; }
-    .brand { gap: 8px; }
-    .brand-logo { height: 30px; }
-    .brand .brand-text { display: none; }
-    .organizer-logos img { height: 48px; }
-    .hero-photo { margin-top: 32px; }
+    .brand .brand-text { font-size: 11px; line-height: 1.4; }
     .badge-student { font-size: 11px; padding: 2px 10px; }
     .hero-date { flex-wrap: wrap; row-gap: 0; }
     .hero-date .day { font-size: 21px; white-space: nowrap; }
@@ -479,13 +449,8 @@
 <header class="site-header">
   <div class="container">
     <div class="brand">
-      <span class="brand-logos">
-        <img class="brand-logo" src="assets/logo-congrant.png" alt="コングラント">
-        <span class="brand-x">×</span>
-        <img class="brand-logo" src="assets/logo-sac.jpg" alt="Social Act Career">
-      </span>
       <span class="badge-student">学生向け</span>
-      <span class="brand-text">特別企画</span>
+      <span class="brand-text">コングラント × Social Act Career│特別企画</span>
     </div>
     <a href="#entry" class="header-cta">参加申込</a>
   </div>
@@ -510,9 +475,6 @@
     </div>
     <a href="#entry" class="cta-btn">参加を申し込む</a>
     <p class="cta-note">※ 定員に達し次第、受付を終了します</p>
-    <figure class="hero-photo">
-      <img src="assets/photo-workshop.jpg" alt="ワークショップで学生たちがアイデアを出し合う様子">
-    </figure>
   </div>
 </section>
 
@@ -530,9 +492,6 @@
       <p>――そんな疑問に、<span class="t-hl">具体的な事例を交えながら</span>お答えします。</p>
       <p>講演後は、<b>クラウドファンディングのタイトル・キャッチコピーを考えるワークショップ</b>を実施。参加者同士でアイデアを出し合い、一番共感できるコピーを選び出すことで、<span class="em-green">人の心を動かすPR・広報スキル</span>のヒントを掴んでいただきます。</p>
       <p class="why-close">ソーシャルビジネスのリアルな仕組みと広報戦略を実践を通して学び、社会性 × ビジネススキルを、いま自分のキャリアに取り入れるチャンス。コングラントの仕事の一部を体験しながら、将来のキャリアについて一緒に考えてみませんか?</p>
-      <figure class="section-photo">
-        <img src="assets/photo-notes.jpg" alt="付箋を使ってキャッチコピーのアイデアを出し合うワークショップの様子">
-      </figure>
     </div>
   </div>
 </section>
@@ -564,9 +523,6 @@
         </div>
       </div>
     </div>
-    <figure class="section-photo">
-      <img src="assets/photo-impact.jpg" alt="つながりを表す輪のイメージ">
-    </figure>
     <div class="company-table-wrap">
       <h3>会社概要</h3>
       <table class="company-table">
@@ -725,13 +681,7 @@
     <h2 class="section-title">開催概要</h2>
     <table class="outline-table">
       <tr><th>イベント名</th><td>CEOと学ぶ、社会課題解決とビジネスを両立する仕事のリアル＆ワークショップ<br>〜フィンテック×ソーシャルビジネスの最前線を学ぶ。社会性も、経済性も。どちらも諦めないキャリアへ。〜</td></tr>
-      <tr><th>主催</th><td>
-        <div class="organizer-logos">
-          <img src="assets/logo-congrant.png" alt="コングラント株式会社">
-          <img src="assets/logo-sac.jpg" alt="Social Act Career">
-        </div>
-        コングラント株式会社 × Social Act Career
-      </td></tr>
+      <tr><th>主催</th><td>コングラント株式会社 × Social Act Career</td></tr>
       <tr><th>日時</th><td>2026年9月8日(火)13:30 – 17:00</td></tr>
       <tr><th>対象</th><td>大学生(学年不問)</td></tr>
       <tr><th>定員</th><td>15名(先着順)</td></tr>
