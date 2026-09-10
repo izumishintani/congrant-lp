@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>リノベル様 新卒採用ご提案</title>
+<meta name="description" content="株式会社リノベル様向け 新卒採用ご提案資料。28卒で検証し、29卒・30卒の早期接点へつなぐ3ヶ月プログラム。Social Act Career 2026年9月。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&family=Shippori+Mincho+B1:wght@600;800&display=swap">
+<style>
+  :root {
+    --green: #7db928;
+    --green-dark: #5c8f12;
+    --green-deep: #33531a;
+    --yellow: #ffd800;
+    --ink: #1f2418;
+    --muted: #6b7260;
+    --paper: #ffffff;
+    --paper-soft: #f6faee;
+    --paper-tint: #eef6dc;
+    --line: #dfe6d0;
+    --heading: #33531a;
+    --accent-text: #5c8f12;
+    --warn-bg: #fff6d6;
+    --warn-ink: #7a5a00;
+    --shadow: 0 10px 30px rgba(51,83,26,.08);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ink: #eef2e4;
+      --muted: #a7ae98;
+      --paper: #171a12;
+      --paper-soft: #1f2417;
+      --paper-tint: #27301b;
+      --line: #363f28;
+      --heading: #c5e58e;
+      --accent-text: #a9d45f;
+      --warn-bg: #3a3010;
+      --warn-ink: #ffd86a;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ink: #eef2e4;
+    --muted: #a7ae98;
+    --paper: #171a12;
+    --paper-soft: #1f2417;
+    --paper-tint: #27301b;
+    --line: #363f28;
+    --heading: #c5e58e;
+    --accent-text: #a9d45f;
+    --warn-bg: #3a3010;
+    --warn-ink: #ffd86a;
+    --shadow: 0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif;
+    color: var(--ink);
+    background: var(--paper-soft);
+    line-height: 1.8;
+    font-size: 15px;
+    padding-inline: 16px;
+    padding-block: 32px 64px;
+    font-feature-settings: "palt";
+  }
+  .mincho { font-family: "Shippori Mincho B1", "Hiragino Mincho ProN", "Yu Mincho", serif; }
+  .deck { max-width: 1080px; margin: 0 auto; display: flex; flex-direction: column; gap: 28px; }
+
+  /* ===== Sheet ===== */
+  .sheet {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    padding: 40px 48px 36px;
+    display: flex; flex-direction: column; gap: 22px;
+    position: relative;
+  }
+  .sheet-head {
+    display: flex; justify-content: space-between; align-items: baseline; gap: 16px;
+    border-bottom: 1px solid var(--line); padding-bottom: 10px;
+  }
+  .sheet-head .label {
+    color: var(--accent-text); font-weight: 800; font-size: 12px;
+    letter-spacing: .16em; text-transform: uppercase;
+  }
+  .sheet-head .no {
+    color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; letter-spacing: .1em;
+  }
+  .sheet h2 {
+    font-size: clamp(21px, 2.8vw, 28px); font-weight: 900; line-height: 1.5;
+    color: var(--heading); text-wrap: balance;
+  }
+  .sheet h2 .u { background: linear-gradient(transparent 62%, var(--yellow) 62%); padding: 0 2px; }
+  :root[data-theme="dark"] .sheet h2 .u { background: linear-gradient(transparent 62%, rgba(255,216,0,.45) 62%); }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .sheet h2 .u { background: linear-gradient(transparent 62%, rgba(255,216,0,.45) 62%); }
+  }
+  .lead { font-size: 15.5px; max-width: 46em; }
+  .lead b { color: var(--accent-text); }
+  .sheet-foot {
+    margin-top: auto; padding-top: 12px; border-top: 1px solid var(--line);
+    display: flex; justify-content: space-between; color: var(--muted); font-size: 11.5px; letter-spacing: .04em;
+  }
+  h3 { font-size: 16px; font-weight: 800; color: var(--heading); line-height: 1.5; text-wrap: balance; }
+  p + p { margin-top: 8px; }
+  ul.plain { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  ul.plain li { padding-left: 18px; position: relative; }
+  ul.plain li::before {
+    content: ""; position: absolute; left: 0; top: .78em; width: 9px; height: 9px;
+    background: var(--green); border-radius: 2px;
+  }
+  .note { color: var(--muted); font-size: 12.5px; }
+  .kicker { display: inline-block; background: var(--green-deep); color: #fff; font-weight: 800; font-size: 12px; border-radius: 6px; padding: 3px 10px; letter-spacing: .06em; }
+  .tag { display: inline-block; border: 1.5px solid var(--green); color: var(--accent-text); font-weight: 700; font-size: 12px; border-radius: 999px; padding: 1px 10px; white-space: nowrap; }
+  .quote {
+    background: var(--paper-tint); border-left: 4px solid var(--green);
+    padding: 14px 18px; font-size: 15px; line-height: 1.9;
+  }
+  .quote .who { display: block; font-family: "Noto Sans JP", sans-serif; font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .grid-2 > *, .grid-3 > * { min-width: 0; }
+  .grid-2 { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .grid-3 { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; }
+  .box { background: var(--paper-soft); border: 1px solid var(--line); padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; }
+  .box.tint { background: var(--paper-tint); border-color: transparent; }
+  .box.warn { background: var(--warn-bg); border-color: transparent; color: var(--warn-ink); }
+  .box .n { font-size: 30px; font-weight: 900; color: var(--heading); line-height: 1.1; font-variant-numeric: tabular-nums; }
+  .box .n small { font-size: 14px; font-weight: 700; color: var(--muted); margin-left: 4px; }
+
+  /* ===== Tables ===== */
+  .tbl-wrap { overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--accent-text); font-size: 12px; letter-spacing: .08em; font-weight: 800; white-space: nowrap; background: var(--paper-soft); }
+  td.k { font-weight: 700; min-width: 8em; }
+  td.num { font-variant-numeric: tabular-nums; }
+  tr.hl td { background: var(--paper-tint); }
+
+  /* ===== Cover ===== */
+  .cover { padding: 64px 56px; gap: 28px; min-height: 520px; overflow: hidden; }
+  .cover::after {
+    content: ""; position: absolute; right: -140px; bottom: -180px; width: 420px; height: 420px; border-radius: 50%;
+    background: var(--paper-tint); z-index: 0;
+  }
+  .cover > * { position: relative; z-index: 1; }
+  .cover .to { font-size: 15px; font-weight: 700; color: var(--muted); letter-spacing: .04em; }
+  .cover .to b { color: var(--heading); font-size: 20px; margin-right: 8px; }
+  .cover h1 { font-size: clamp(28px, 4.6vw, 46px); font-weight: 800; line-height: 1.45; color: var(--heading); text-wrap: balance; max-width: 20em; }
+  .cover h1 .em { color: var(--accent-text); }
+  .cover .sub { font-size: clamp(15px, 2vw, 19px); font-weight: 700; color: var(--accent-text); }
+  .cover .from { display: flex; flex-wrap: wrap; gap: 8px 28px; align-items: baseline; margin-top: 12px; color: var(--muted); font-size: 13.5px; }
+  .cover .from b { color: var(--ink); font-size: 15px; }
+  .cover .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+
+  /* ===== Funnel ===== */
+  .funnel { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: stretch; }
+  .funnel .step { padding: 16px 18px; border: 1px solid var(--line); background: var(--paper-soft); position: relative; }
+  .funnel .step + .step { border-left: none; }
+  .funnel .step .lab { font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: .06em; }
+  .funnel .step .n { font-size: 32px; font-weight: 900; color: var(--heading); line-height: 1.2; font-variant-numeric: tabular-nums; }
+  .funnel .step .n small { font-size: 13px; color: var(--muted); font-weight: 700; margin-left: 3px; }
+  .funnel .step .d { font-size: 12.5px; }
+
+  /* ===== Dilemma diagram ===== */
+  .poles { display: grid; grid-template-columns: 1fr auto 1fr; gap: 14px; align-items: stretch; }
+  .pole { border: 1px solid var(--line); padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; background: var(--paper); }
+  .pole .h { font-weight: 800; font-size: 15px; color: var(--heading); }
+  .pole .arrow { font-size: 12px; color: var(--muted); font-weight: 700; letter-spacing: .06em; }
+  .pole .res { font-weight: 700; }
+  .pole .bad { color: var(--warn-ink); background: var(--warn-bg); padding: 6px 10px; font-size: 13px; font-weight: 700; }
+  .center { display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 6px; text-align: center; padding: 14px 16px; background: var(--green-deep); color: #fff; min-width: 190px; }
+  .center .t { font-weight: 900; font-size: 15px; color: var(--yellow); }
+  .center .d { font-size: 12.5px; line-height: 1.6; }
+
+  /* ===== Donut ===== */
+  .donut-wrap { display: grid; grid-template-columns: 300px 1fr; gap: 24px; align-items: center; }
+  .donut-wrap svg { width: 100%; height: auto; max-width: 100%; }
+  .donut-wrap svg text { font-family: "Noto Sans JP", sans-serif; }
+
+  /* ===== Steps ===== */
+  .steps { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .step-card { border: 1px solid var(--line); padding: 20px 22px; display: flex; flex-direction: column; gap: 10px; background: var(--paper); }
+  .step-card.now { border: 2px solid var(--green); background: var(--paper-soft); }
+  .step-card .when { font-size: 12px; font-weight: 800; letter-spacing: .1em; color: var(--accent-text); }
+  .step-card h3 { font-size: 18px; }
+
+  /* ===== Flow ===== */
+  .flow { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 10px; }
+  .flow .f { border: 1px solid var(--line); background: var(--paper-soft); padding: 14px 14px 16px; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+  .flow .f .own { font-size: 11px; font-weight: 800; letter-spacing: .08em; }
+  .flow .f .own.sac { color: var(--accent-text); }
+  .flow .f .own.rn { color: var(--muted); }
+  .flow .f h4 { font-size: 14.5px; font-weight: 800; color: var(--heading); line-height: 1.4; }
+
+  /* ===== Timeline ===== */
+  .tl { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0; }
+  .tl .m { border-top: 4px solid var(--line); padding: 12px 14px 4px; }
+  .tl .m.on { border-top-color: var(--green); }
+  .tl .m .mo { font-weight: 900; font-size: 18px; color: var(--heading); font-variant-numeric: tabular-nums; }
+  .tl .m .ph { font-size: 12px; color: var(--accent-text); font-weight: 800; letter-spacing: .06em; margin-bottom: 6px; }
+  .tl .m ul { list-style: none; display: flex; flex-direction: column; gap: 6px; font-size: 13px; }
+  .tl .m li { padding-left: 14px; position: relative; }
+  .tl .m li::before { content: ""; position: absolute; left: 0; top: .8em; width: 6px; height: 6px; border-radius: 50%; background: var(--green); }
+  .tl .m li.fixed::before { background: var(--yellow); }
+
+  /* ===== Roles ===== */
+  .roles { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+  .role { border: 1px solid var(--line); padding: 18px 20px; display: flex; flex-direction: column; gap: 10px; }
+  .role.sac { border-color: var(--green); background: var(--paper-soft); }
+  .role .who { font-weight: 900; font-size: 16px; color: var(--heading); display: flex; align-items: center; gap: 10px; }
+
+  /* ===== Checklist ===== */
+  ol.check { list-style: none; counter-reset: c; display: flex; flex-direction: column; gap: 10px; }
+  ol.check li { counter-increment: c; display: grid; grid-template-columns: 34px 1fr; gap: 10px; align-items: start; }
+  ol.check li::before { content: counter(c, decimal-leading-zero); font-weight: 900; color: var(--accent-text); font-variant-numeric: tabular-nums; font-size: 15px; line-height: 1.7; }
+  ol.check li b { display: block; }
+  ol.check li span { grid-column: 2; color: var(--muted); font-size: 13px; }
+
+  /* ===== Responsive ===== */
+  @media (max-width: 860px) {
+    .sheet { padding: 28px 22px 26px; }
+    .cover { padding: 40px 24px; min-height: 0; }
+    .grid-3, .flow, .tl, .funnel { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .donut-wrap { grid-template-columns: 1fr; }
+    .donut-wrap svg { max-width: 320px; margin: 0 auto; }
+    .poles { grid-template-columns: 1fr; }
+    .center { min-width: 0; }
+  }
+  @media (max-width: 560px) {
+    .grid-2, .grid-3, .flow, .tl, .funnel, .steps, .roles { grid-template-columns: 1fr; }
+    .funnel .step + .step { border-left: 1px solid var(--line); border-top: none; }
+  }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+  /* ===== Print ===== */
+  @media print {
+    body { background: #fff; padding: 0; font-size: 12.5px; }
+    .deck { gap: 0; max-width: none; }
+    .sheet { box-shadow: none; border: none; page-break-after: always; break-after: page; padding: 28px 32px; min-height: 0; }
+    .cover { min-height: 60vh; }
+    .cover::after { display: none; }
+  }
+</style>
+</head>
+<body>
+<main class="deck">
+
+  <!-- 00 Cover -->
+  <section class="sheet cover" id="cover">
+    <div class="to"><b>株式会社リノベル 様</b>新卒採用に関するご提案</div>
+    <h1 class="mincho">「リノベル人」に出会うための、<br><span class="em">母集団の質</span>の再設計</h1>
+    <p class="sub">28卒で検証し、29卒・30卒の早期接点へつなぐ 3ヶ月プログラム</p>
+    <div class="chips">
+      <span class="tag">文系総合職の母集団形成</span>
+      <span class="tag">既存コンテンツを活用</span>
+      <span class="tag">成果報酬型</span>
+      <span class="tag">人事工数は最小限</span>
+    </div>
+    <div class="from">
+      <span><b>Social Act Career</b>　新谷・清水</span>
+      <span>2026年9月</span>
+      <span>先日のお打ち合わせ（鈴木様）でお伺いした内容をもとに作成</span>
+    </div>
+  </section>
+
+  <!-- 01 Summary -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">Summary</span><span class="no">01 / 14</span></div>
+    <h2>課題は「数」ではなく<span class="u">「層」</span>。<br>合いそうな学生を先に着席させ、打ち出し方ごと検証します</h2>
+    <div class="grid-3">
+      <div class="box tint">
+        <span class="kicker">現状の捉え方</span>
+        <p>応募は集まっている。けれど文系総合職で採りたい「寄り添い × 推進力」の層が母集団に入っていない。建築学生は認知があり困っていない一方、文系へのメッセージと出会い方がまだ見つかっていない。</p>
+      </div>
+      <div class="box tint">
+        <span class="kicker">ご提案</span>
+        <p>既存コンテンツをそのまま2回開催いただき、Social Act Careerが各回10名程度の「価値観が合いそうな学生」を着席。参加後のインタビューで、どの言葉・どの属性が刺さったかを検証する。</p>
+      </div>
+      <div class="box tint">
+        <span class="kicker">ゴール</span>
+        <p>28卒で本選考進行3〜4名・内定承諾1名を狙いつつ、年内に29卒・30卒向けの早期接点の設計図（メッセージ案・企画タイトル案）をお渡しする。</p>
+      </div>
+    </div>
+    <p class="note">本資料内の人数・金額はお打ち合わせでお伺いした内容をもとにした概算です。次回のお打ち合わせで実数とすり合わせをお願いいたします。</p>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 02 現状 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">お伺いした現状</span><span class="no">02 / 14</span></div>
+    <h2>採用の全体像と、選考ファネル</h2>
+    <div class="grid-2">
+      <div class="tbl-wrap">
+        <table>
+          <tbody>
+            <tr><td class="k">採用人数</td><td>毎年 10〜15名。建築学生が約半分、非建築（文系）が約半分</td></tr>
+            <tr><td class="k">文系の配属先</td><td>入口は総合職。<b>toC</b>：一人ひとりの暮らしを紐解くコンサル職／<b>toB</b>：都市創造（企業の遊休不動産・社宅などの再生を企画し受注する企画営業）</td></tr>
+            <tr><td class="k">採用体制</td><td>新卒採用担当 2名で全体を運営</td></tr>
+            <tr><td class="k">選考の特徴</td><td>二次（グループ面接）通過後は人事がメンターとして伴走。ワークシートを一緒に作り込み、社員面談を組み、多い方で3回。役員面接はカウンセリングに近い</td></tr>
+            <tr><td class="k">強み</td><td>実際に会って話せた学生は、選考への移行率が高い</td></tr>
+            <tr><td class="k">課題</td><td>「会うまで」。採りたい層に最初に出会えていない</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <h3>年間の選考ファネル（概算）</h3>
+        <div class="funnel">
+          <div class="step"><div class="lab">二次通過</div><div class="n">60<small>名</small></div><div class="d">ここから人事メンターの伴走が始まる</div></div>
+          <div class="step"><div class="lab">役員面接へ</div><div class="n">20<small>名</small></div><div class="d">通過率は約1/3</div></div>
+          <div class="step"><div class="lab">内定承諾</div><div class="n">13<small>名</small></div><div class="d">最終的な承諾数</div></div>
+        </div>
+        <div class="quote mincho">実際会ったり喋ったりすると、選考への移行率がすごく高い。いかにその最初に会えるか。そこまでがすごく課題。<span class="who">お打ち合わせでの鈴木様のお言葉より</span></div>
+        <p class="note">Social Act Careerへのご期待は「60名を70〜80名に増やす」ことではなく、この60名の中に採りたい層を増やすこと、と理解しています。</p>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 03 課題の構造 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">課題の構造</span><span class="no">03 / 14</span></div>
+    <h2>打ち出しのジレンマ。どちらに振っても<span class="u">欲しい層の手前</span>で止まる</h2>
+    <div class="poles">
+      <div class="pole">
+        <div class="h">「社会課題・業界を変える」を強く出す</div>
+        <div class="arrow">27卒前半の打ち出し</div>
+        <p class="res">集まる層：構造を変えたい／大きいことがしたい／顧客志向が弱い</p>
+        <div class="bad">一人ひとりのお客様に寄り添う業務とミスマッチ</div>
+      </div>
+      <div class="center">
+        <div class="t">採りたい層</div>
+        <div class="d">一人ひとりに寄り添い、<br>その先の未来まで<br>推進・実践できる人</div>
+        <div class="d" style="opacity:.8">＝ どちらの訴求でも<br>届ききっていない</div>
+      </div>
+      <div class="pole">
+        <div class="h">「誰かのため・寄り添う」を強く出す</div>
+        <div class="arrow">27卒後半〜28卒の打ち出し</div>
+        <p class="res">集まる層：寄り添いたい“が目的”の、やや弱めの学生</p>
+        <div class="bad">力強さ・ベンチャー志向が足りない</div>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <h3>もう一つの軸：建築と文系で認知がまったく違う</h3>
+        <ul class="plain">
+          <li>建築学生：リノベルの事業を深く知っており、母集団形成に困っていない</li>
+          <li>文系学生：認知が弱い。イベント・インターンへの接触そのものが課題</li>
+          <li>「まちづくり」の言葉に惹かれる層は大手デベロッパーへ流れ、リノベルにはヒットしない</li>
+        </ul>
+      </div>
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>これまでのチャネル</th><th>結果</th></tr></thead>
+          <tbody>
+            <tr><td class="k">マイナビ</td><td>継続中。ただし「ターゲットがマイナビにいない気がする」</td></tr>
+            <tr><td class="k">エンカレッジ（27卒）</td><td class="num">エントリー約1,800 → 選考・内定 0。工数と費用対効果が合わず終了</td></tr>
+            <tr><td class="k">人材紹介（27卒 年明け）</td><td>約80万円/名。時期が遅く、合う学生に出会えず</td></tr>
+            <tr><td class="k">OpenWork スカウト</td><td>12月実施で1名決定。2〜3周目の学生には有効</td></tr>
+            <tr><td class="k">キャリアチケット（28卒）</td><td>開始したばかり</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 04 リノベル人 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">求める人物像</span><span class="no">04 / 14</span></div>
+    <h2>「リノベル人」を、学生を選ぶ基準として<span class="u">3つ</span>に言語化しました</h2>
+    <div class="grid-3">
+      <div class="box">
+        <span class="kicker">1</span>
+        <h3>寄り添う × 成果を出す</h3>
+        <p>寄り添いは目的ではなく、お客様の暮らしを実際に変えるための手段。数千万円の意思決定に伴走し、価値観を変えるところまで推進できる。</p>
+      </div>
+      <div class="box">
+        <span class="kicker">2</span>
+        <h3>自分ごと化する力（事業家的）</h3>
+        <p>自分のなりたい姿が整理されていて、その延長線上にリノベルのミッションが連鎖する。会社のためではなく自分のために働き、「だからリノベル」と腹落ちしている。</p>
+      </div>
+      <div class="box">
+        <span class="kicker">3</span>
+        <h3>「暮らし」への課題意識と原体験</h3>
+        <p>多様な価値観を受け入れたい。暮らしは人生の基盤で、住まいが変わると考え方や家族のあり方が変わる、という感覚を自分の経験から持っている。</p>
+      </div>
+    </div>
+    <div class="grid-2">
+      <div class="quote mincho">自分のミッションとリノベルのミッションの方向性が一致しているかどうか。自分のなりたい姿がちゃんと整理されていて、その先にリノベルのミッションが連鎖する。その落としどころを紐づけられる人。<span class="who">お打ち合わせでの鈴木様のお言葉より</span></div>
+      <div>
+        <h3>今回は「送客しない」層</h3>
+        <ul class="plain">
+          <li>地図に残る仕事・大きなことがしたい（構造志向のガチ勢）</li>
+          <li>「寄り添いたい」が目的で、結果へのこだわりが薄い</li>
+          <li>まだ就活を始めたばかりで、自己分析が進んでいない</li>
+        </ul>
+        <p class="note">Social Act Careerが接している学生団体の上位層は「志が高すぎて就職するか分からない」ことも多く、その次の層に、この3条件を満たす学生がいます。</p>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 05 ターゲットはどこに -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">ターゲットはどこにいるか</span><span class="no">05 / 14</span></div>
+    <h2>「暮らし」にまだ辿り着いていない、<span class="u">ドーナツの外側</span>にいる学生</h2>
+    <div class="donut-wrap">
+      <svg viewBox="0 0 300 300" role="img" aria-label="中心に住まい・暮らしへの関心層、その外側に地方創生・まちづくり・日常の豊かさ・サステナブルな暮らしに関心のある層">
+        <circle cx="150" cy="150" r="140" fill="#eef6dc" stroke="#7db928" stroke-width="2"/>
+        <circle cx="150" cy="150" r="72" fill="#33531a"/>
+        <text x="150" y="143" text-anchor="middle" font-size="12" font-weight="800" fill="#ffd800">住まい・暮らし</text>
+        <text x="150" y="160" text-anchor="middle" font-size="10" fill="#ffffff">建築学生など</text>
+        <text x="150" y="174" text-anchor="middle" font-size="10" fill="#ffffff">認知あり・困っていない</text>
+        <text x="150" y="36" text-anchor="middle" font-size="11.5" font-weight="700" fill="#33531a">地方創生</text>
+        <text x="258" y="120" text-anchor="middle" font-size="11.5" font-weight="700" fill="#33531a">まちづくり</text>
+        <text x="236" y="230" text-anchor="middle" font-size="11.5" font-weight="700" fill="#33531a">日常の豊かさ</text>
+        <text x="64" y="230" text-anchor="middle" font-size="11.5" font-weight="700" fill="#33531a">人生に伴走</text>
+        <text x="46" y="120" text-anchor="middle" font-size="11.5" font-weight="700" fill="#33531a">サステナブル</text>
+        <text x="150" y="278" text-anchor="middle" font-size="10" fill="#5c8f12">「不動産・リノベは私じゃない」と線を引いている層</text>
+      </svg>
+      <div style="display:flex;flex-direction:column;gap:14px;">
+        <ul class="plain">
+          <li><b>関心の言葉が違う。</b>地方創生、まちづくり、日常を豊かにする、サステナブルな暮らし。テーマは重なるのに、「不動産」「リノベーション」と聞いた瞬間に一線を引いてしまう。</li>
+          <li><b>会えば変わる。</b>「住むところって絶対そうだよね」と話していくと「確かに」になる。業界イメージを崩す入口（企画のタイトル・言葉）が鍵。</li>
+          <li><b>ナビ媒体にいない。</b>この層は1・2年生の時点で自己分析や企業研究を済ませ、情報を自分で取りに行く。今から28卒就活を始める層とは動きが違う。</li>
+        </ul>
+        <div class="box tint">
+          <h3>Social Act Careerにできること</h3>
+          <p>学生団体・ソーシャル領域で活動する学生と日常的に接しています。「ソーシャル」がひとくくりでなく細分化した今だからこそ、数百名ではなく<b>価値観ベースで十数名を選んで送客</b>できます。</p>
+        </div>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 06 提案の全体像 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">ご提案の全体像</span><span class="no">06 / 14</span></div>
+    <h2>28卒で検証し、その結果で<span class="u">29卒・30卒の設計</span>を決める</h2>
+    <div class="steps">
+      <div class="step-card now">
+        <div class="when">STEP 1 ｜ 2026年10月〜12月</div>
+        <h3>28卒 検証フェーズ「自由研究の3ヶ月」</h3>
+        <ul class="plain">
+          <li>既存コンテンツをそのまま2回開催（新規制作なし）</li>
+          <li>各回10名程度、Social Act Careerが合いそうな学生を着席</li>
+          <li>参加後インタビュー・アンケートで「刺さった言葉／属性」を検証</li>
+          <li>合う学生はそのまま本選考へ接続</li>
+          <li>年内に検証レポートと29卒向け企画案をご提出</li>
+        </ul>
+      </div>
+      <div class="step-card">
+        <div class="when">STEP 2 ｜ 2027年〜（検証結果をもとに別途ご提案）</div>
+        <h3>29卒・30卒 早期母集団形成</h3>
+        <ul class="plain">
+          <li>1・2年生向けの選抜型プログラムと報告会で、次の母集団を作る</li>
+          <li>「暮らし」「まち」「人生に伴走」から入る企画タイトルで業界イメージを崩す</li>
+          <li>社員・OBOGの声を含む、ビジョンと現場の一貫性が伝わる発信</li>
+          <li>「ピーク時に次年度を仕込む」負担を通年の接点に分散</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">STEP 1は「リノベルの人事を一人増やす」感覚で、学生側の窓口・ヒアリング・企画の下書きをSocial Act Careerが担います。貴社側の追加工数は、既存コンテンツの開催と選考のみを想定しています。</p>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 07 STEP1 詳細 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">STEP 1 の進め方</span><span class="no">07 / 14</span></div>
+    <h2>5つの工程。<span class="u">3つ</span>をSocial Act Careerが担います</h2>
+    <div class="flow">
+      <div class="f"><div class="own sac">Social Act Career</div><h4>1. 学生の選定・声かけ</h4><p>「リノベル人」3条件に沿って、各回10名程度を個別に声かけ。案内文はSocial Act Careerがドラフトし、貴社に確認いただきます。</p></div>
+      <div class="f"><div class="own rn">リノベル様</div><h4>2. 既存コンテンツの開催</h4><p>候補は10/1の都市創造ワーク（半日）への枠追加と、半日ワークの再演。1dayの選抜プログラムは工数が大きいため、枠の余裕があれば数名の参加を検討。</p></div>
+      <div class="f"><div class="own sac">Social Act Career</div><h4>3. 参加後インタビュー</h4><p>参加した学生に個別ヒアリング。どの言葉で来たか、toC／toBのどちらに反応したか、業界イメージがどこで変わったかを聞きます。</p></div>
+      <div class="f"><div class="own sac">Social Act Career</div><h4>4. レポートと企画提案</h4><p>刺さったメッセージ、企画タイトル案、29卒・30卒の接点設計をまとめてご提出。既存コンテンツの「残す／変える」も整理します。</p></div>
+      <div class="f"><div class="own rn">リノベル様</div><h4>5. 本選考への接続</h4><p>合う学生は本選考へ。二次以降の人事メンターの伴走に乗せ、Social Act Career側も学生の迷いを拾ってフォローします。</p></div>
+    </div>
+    <div class="grid-2">
+      <div class="box tint">
+        <h3>なぜ「既存コンテンツをそのまま」なのか</h3>
+        <p>秋以降は選考も始まり、新卒担当2名でコンテンツを新規制作する余裕は大きくありません。半日のワークであれば同じ内容の再演で工数がほぼ増えず、学生側の違いだけを純粋に検証できます。</p>
+      </div>
+      <div class="box tint">
+        <h3>なぜ「ヒアリング」を挟むのか</h3>
+        <p>自社で取るアンケートより、日頃から関係のある第三者が聞く方が本音が出ます。28卒の採用結果に関わらず、29卒の打ち出しを決める材料が手元に残ります。</p>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 08 スケジュール -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">スケジュール案</span><span class="no">08 / 14</span></div>
+    <h2>9月に決めて、10月・11月に2回、12月にまとめる</h2>
+    <div class="tl">
+      <div class="m on">
+        <div class="mo">9月</div><div class="ph">準備</div>
+        <ul>
+          <li>本提案のすり合わせ（来週）</li>
+          <li>再演するコンテンツと追加枠の決定</li>
+          <li>学生への案内文・企画タイトルのドラフト</li>
+          <li class="fixed">9/17 選抜1day：枠に余裕があれば数名参加</li>
+        </ul>
+      </div>
+      <div class="m on">
+        <div class="mo">10月</div><div class="ph">第1回</div>
+        <ul>
+          <li class="fixed">10/1 都市創造ワーク（半日）に着席（〜10名）</li>
+          <li>参加後インタビュー 第1回</li>
+          <li>合う学生を本選考へ接続</li>
+        </ul>
+      </div>
+      <div class="m on">
+        <div class="mo">11月</div><div class="ph">第2回</div>
+        <ul>
+          <li>半日ワークの再演（〜10名）</li>
+          <li>参加後インタビュー 第2回</li>
+          <li>中間共有（刺さった言葉の速報）</li>
+        </ul>
+      </div>
+      <div class="m on">
+        <div class="mo">12月</div><div class="ph">まとめ</div>
+        <ul>
+          <li>検証レポートのご提出</li>
+          <li>29卒・30卒向け企画のご提案</li>
+          <li>28卒 選考進捗の共有と次年度の判断</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">黄色の点はお打ち合わせで日程を伺った既存イベントです。9/17は現在フィックス済みと伺っており、増枠の可否は次回ご相談させてください。</p>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 09 役割分担 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">役割分担</span><span class="no">09 / 14</span></div>
+    <h2>「人事を一人増やす」感覚でご一緒します</h2>
+    <div class="roles">
+      <div class="role">
+        <div class="who">リノベル様</div>
+        <ul class="plain">
+          <li>既存コンテンツの開催（10/1 の枠追加、半日ワークの再演）</li>
+          <li>案内文・企画タイトルのご確認</li>
+          <li>面接・選考、二次以降の人事メンターの伴走</li>
+          <li>参加学生に関する所感の共有（月1回・30分程度）</li>
+          <li>インタビューで聞いてほしいことのご指定</li>
+        </ul>
+      </div>
+      <div class="role sac">
+        <div class="who">Social Act Career <span class="tag">新谷・清水</span></div>
+        <ul class="plain">
+          <li>「リノベル人」3条件に沿った学生の選定と個別の声かけ</li>
+          <li>参加前のアトラクト（リノベルの価値観を「暮らし」の言葉で事前共有）</li>
+          <li>当日の学生側サポート、参加後の個別インタビューとアンケート</li>
+          <li>選考中の学生の迷いのフォロー</li>
+          <li>検証レポート、メッセージ案・企画タイトル案、29卒・30卒接点設計のご提出</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 10 KPI -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">検証する問いと目標</span><span class="no">10 / 14</span></div>
+    <h2>数字と、数字の理由の両方を持ち帰る</h2>
+    <div class="grid-3">
+      <div class="box"><div class="n">20<small>名</small></div><p>着席（10名 × 2回）。既存イベントの12〜20名規模に合わせた人数です。</p></div>
+      <div class="box"><div class="n">3〜4<small>名</small></div><p>本選考への進行。着席した学生の2割程度が二次以降の伴走に乗る想定です。</p></div>
+      <div class="box"><div class="n">1<small>名</small></div><p>内定承諾。「それっぽい人が20名いれば1名は入りそう」という肌感を、まず検証します。</p></div>
+    </div>
+    <div class="grid-2">
+      <div>
+        <h3>定性で検証する問い</h3>
+        <ul class="plain">
+          <li>どの関心キーワード（地方創生／まちづくり／暮らし／サステナブル）から来た学生が「自分ごと化」したか</li>
+          <li>toC（暮らしのコンサル）とtoB（都市創造）のどちらに、どんな学生が反応したか</li>
+          <li>「不動産・リノベは私じゃない」の壁は、コンテンツのどの場面で崩れたか</li>
+          <li>既存コンテンツのうち、29卒に残すもの・変えるもの</li>
+        </ul>
+      </div>
+      <div class="box tint">
+        <h3>12月にお渡しするもの</h3>
+        <ul class="plain">
+          <li>検証レポート（参加学生の属性・反応・選考進捗）</li>
+          <li>文系総合職向けの打ち出しメッセージ案</li>
+          <li>企画タイトル案（3案程度）</li>
+          <li>29卒・30卒 年間の接点設計（ドラフト）</li>
+        </ul>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 11 費用 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">費用のご提案</span><span class="no">11 / 14</span></div>
+    <h2>STEP 1 は<span class="u">成果報酬のみ</span>。着手金はいただきません</h2>
+    <div class="tbl-wrap">
+      <table>
+        <thead><tr><th>項目</th><th>内容</th><th>費用</th></tr></thead>
+        <tbody>
+          <tr class="hl"><td class="k">成果報酬</td><td>Social Act Careerが送客した学生の内定承諾1名につき</td><td class="num">80〜90万円／名（目安）</td></tr>
+          <tr><td class="k">検証プログラム</td><td>学生選定・声かけ、参加後インタビュー、検証レポート、29卒・30卒向け企画提案</td><td>STEP 1 は成果報酬に内包（初期費用なし）</td></tr>
+          <tr><td class="k">STEP 2</td><td>1・2年生向け選抜型プログラム、報告会、発信コンテンツなど</td><td>検証結果をもとに別途お見積り</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="grid-2">
+      <div class="box tint">
+        <h3>この形にした理由</h3>
+        <p>現在ご利用の人材紹介と同水準の単価にそろえ、成果が出なければ費用が発生しない形にすることで、まず「この層に会えるのか」をリスクなく試していただきたいと考えています。</p>
+      </div>
+      <div class="box tint">
+        <h3>次回すり合わせたい点</h3>
+        <p>単価の確定、成果の定義（内定承諾の時点）、送客した学生が他経路で応募した場合の扱い。いずれも次回のお打ち合わせで確認させてください。</p>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 12 STEP2 -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">STEP 2 のイメージ</span><span class="no">12 / 14</span></div>
+    <h2>29卒・30卒：出会う時期を<span class="u">1・2年生</span>に前倒しする</h2>
+    <div class="grid-2">
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="box">
+          <h3>選抜型プログラムと報告会</h3>
+          <p>例：遊休不動産や土地利用をテーマにした海外フィールドリサーチ（1週間程度）。選抜して実施し、その報告会で次の母集団を集める。学生のチャレンジが増え、採用と同時に「優秀な学生を増やす」活動にもなります。</p>
+        </div>
+        <div class="box">
+          <h3>入口の言葉を変える</h3>
+          <p>「暮らし」「まち」「人生に伴走する」から入り、不動産・リノベーションという言葉は後から。業界イメージで線を引く前に、価値観で出会ってもらう企画タイトルを設計します。</p>
+        </div>
+        <div class="box">
+          <h3>ビジョンと現場の一貫性を見せる</h3>
+          <p>学生は表の情報と内情が一致しているかを見ています。社員・OBOGが自分の言葉でミッションを語る記事（note等）を増やし、早期接点が「本当にそうなのか」という疑念に変わらないようにします。</p>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="quote mincho">なんで決めたのか。働くイメージが湧くかどうか。この会社で働きたいと思ったか。同期のメンバーとの仲の良さ、組織の雰囲気。最終はそこで決めている学生が多い。<span class="who">Social Act Careerが最近ヒアリングした学生の傾向</span></div>
+        <div class="box tint">
+          <h3>リノベルの選考は、すでに強い</h3>
+          <p>二次以降の人事メンターの伴走、社員面談、カウンセリング型の役員面接。学生が最終的に1社を決める理由に、そのまま応えている設計です。これを1・2年生の段階に前倒しすることが、STEP 2の核になります。</p>
+        </div>
+        <div class="box">
+          <h3>通年の接点に分散する</h3>
+          <p>「27卒・28卒のピーク時に29卒を仕込む」構造を、報告会・記事・少人数イベントの年間カレンダーに置き換え、出遅れを防ぎます。</p>
+        </div>
+      </div>
+    </div>
+    <p class="note">参考：1・2年生の時点で就職活動を意識して動き始める学生は約4割（お打ち合わせで共有したナビ媒体の調査。次回、出典を添えてお持ちします）。ソーシャル領域で活動する学生は、さらに早い傾向があります。</p>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 13 次回決めたいこと -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">次回のお打ち合わせで決めたいこと</span><span class="no">13 / 14</span></div>
+    <h2>6つ決まれば、9月中に学生への声かけを始められます</h2>
+    <ol class="check">
+      <li><b>再演するコンテンツと追加枠</b><span>10/1 都市創造ワークへの枠追加（〜10名）と、11月の半日ワーク再演で良いか。9/17 選抜1dayへの数名参加の可否。</span></li>
+      <li><b>学生への案内文・企画タイトル</b><span>Social Act Careerがドラフトをお持ちします。「暮らし」「まち」から入る言葉にするか、既存の告知文のままにするか。</span></li>
+      <li><b>参加後インタビューの設計</b><span>リノベル様として知りたいこと、聞いてほしくないことの確認。</span></li>
+      <li><b>費用形態</b><span>成果報酬の単価、成果の定義、他経路応募の扱い。</span></li>
+      <li><b>本選考への接続方法</b><span>エントリー導線、二次以降の伴走への乗せ方、Social Act Career側のフォロー範囲。</span></li>
+      <li><b>お打ち合わせの頻度</b><span>月1回・30分の進捗共有と、12月の報告会（60分）を想定。</span></li>
+    </ol>
+    <p class="note">次回は60分いただけるとすり合わせまで進められます。共有のみであれば30分でも可能です。候補日は鈴木様よりメールでご連絡いただく予定です。</p>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+  <!-- 14 Appendix -->
+  <section class="sheet">
+    <div class="sheet-head"><span class="label">Appendix</span><span class="no">14 / 14</span></div>
+    <h2>参加後インタビュー項目案（学生向け）</h2>
+    <div class="grid-2">
+      <div class="tbl-wrap">
+        <table>
+          <thead><tr><th>観点</th><th>質問</th></tr></thead>
+          <tbody>
+            <tr><td class="k">参加前のイメージ</td><td>リノベル、不動産・リノベーション業界に対して参加前に持っていたイメージは何か</td></tr>
+            <tr><td class="k">参加の決め手</td><td>案内文のどの言葉で参加を決めたか。迷った点は何か</td></tr>
+            <tr><td class="k">toC／toB</td><td>暮らしのコンサルと都市創造、どちらに惹かれたか。その理由</td></tr>
+            <tr><td class="k">自分ごと化</td><td>「自分がやる仕事だ」と感じた瞬間はあったか。なければ何が足りなかったか</td></tr>
+            <tr><td class="k">イメージの変化</td><td>参加後、業界・会社のイメージはどこで変わったか</td></tr>
+            <tr><td class="k">なりたい姿との重なり</td><td>自分のなりたい姿とリノベルのミッションが重なる点、ずれる点</td></tr>
+            <tr><td class="k">次のアクション</td><td>選考に進みたいか。迷いがあるとしたら何か。誰に何を聞ければ決められるか</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <div class="box tint">
+          <h3>お打ち合わせで伺った、既存の28卒コンテンツ</h3>
+          <ul class="plain">
+            <li>選抜型 1day（9/17、9:30〜19:30、12名程度、面接あり）：建築学生も参加。文系は少なめ</li>
+            <li>建築学生向け 選抜型（実施済み）：母集団形成に課題なし</li>
+            <li>都市創造ワーク（10/1、半日、20名程度）：まちづくり志向の学生が集まる想定</li>
+            <li>オープン型（実施済み、12名程度）：迷っている学生は集まったが、暮らしに辿り着いていない</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>Social Act Career について</h3>
+          <p>学生団体で活動する学生、社会課題・ソーシャルに関心のある学生を対象にしたキャリア支援。採用だけでなく、選考の過程で学生が成長する構図と、学生のチャレンジの機会を増やすことを目指しています。</p>
+          <p class="note">担当：新谷（Social Act Career）／清水（2026年5月より参画。ベンチャー企業の採用戦略・コンテンツ設計に従事）</p>
+        </div>
+      </div>
+    </div>
+    <div class="sheet-foot"><span>Social Act Career × リノベル</span><span>ご提案 2026.09</span></div>
+  </section>
+
+</main>
+</body>
+</html>
